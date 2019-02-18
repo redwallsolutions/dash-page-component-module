@@ -23,7 +23,11 @@ function (_Component) {
     value: function render() {
       return React.createElement(React.Fragment, null, React.createElement(Global, null), React.createElement(PageContainer, {
         className: "dash-page"
-      }, React.createElement(PageHeader, null, this.props.pageTitle, React.createElement("br", null), React.createElement("small", null, this.props.pageSubtitle)), React.createElement(PageContent, null, this.props.children)));
+      }, React.createElement(PageHeader, {
+        breadcrumbs: this.props.breadcrumbs,
+        actions: this.props.actions,
+        bottomBar: this.props.bottom
+      }, this.props.pageTitle, React.createElement("br", null), React.createElement("small", null, this.props.pageSubtitle)), React.createElement(PageContent, null, this.props.children)));
     }
   }]);
 

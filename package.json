@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@atlaskit/breadcrumbs": "^6.0.15",
     "@atlaskit/page-header": "^6.1.2",
     "styled-components": "^4.1.3"
   }
