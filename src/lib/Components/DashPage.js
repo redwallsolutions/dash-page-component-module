@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import PageHeader from '@atlaskit/page-header'
-import { PageContainer, PageTitle, PageContent, Global } from './Style';
+import { PageContainer, PageContent, Global } from './Style';
 
 class DashPage extends Component {
 

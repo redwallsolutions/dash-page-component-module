@@ -1,5 +1,5 @@
 import styled, {createGlobalStyle} from 'styled-components'
-import Poppins from '../../assets/fonts/Poppins-Regular.ttf'
+import Poppins from './../assets/fonts/Poppins-Regular.ttf'
 
 export const Global = createGlobalStyle`
   @font-face {
@@ -22,10 +22,6 @@ export const Global = createGlobalStyle`
 export const PageContainer = styled.div`
   padding: 0 5px;
   width: 100%;
-`
-
-export const PageTitle = styled.h1`
-  font-size: 30px;
 `
 
 export const PageContent = styled.div`

@@ -5,7 +5,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
 import PageHeader from '@atlaskit/page-header';
-import { PageContainer, PageTitle, PageContent, Global } from './Style';
+import { PageContainer, PageContent, Global } from './Style';
 
 var DashPage =
 /*#__PURE__*/
