@@ -1,14 +1,15 @@
 import React from 'react';
 import { render } from "react-dom";
 
+import DashPage from './lib'
+
 const App = () => (
-  <div style={{height:'99vh',width:'99vw',display: 'flex', justifyContent:'center', alignItems:'center',flexDirection:'column'}}>
-    <h1>It worked! ;)</h1>
-    <h4>You can create your components inside <span style={{color: 'red'}}>'/src/lib'</span> folder. </h4>
-    <h3>Don't forget to import and export them in the <span style={{color: 'red'}}>'/src/lib/index.js'</span> file before publish it.</h3>
-    <h5>It was made by <span style={{color: 'red'}}>'Redwall Solutions!</span></h5>
-    <p>Thank you.</p>
-  </div>
+  <DashPage
+    pageSubtitle='Esse é o teste do component DashPage.'
+    pageTitle='Test Dash Page'
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </DashPage>
 );
 
 render(<App />, document.getElementById("root"));
