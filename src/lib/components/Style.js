@@ -27,3 +27,7 @@ export const PageContainer = styled.div`
 export const PageContent = styled.div`
   width: 100%;
 `
+
+export const BreadCrumbStyled = styled.h2`
+  font-size: 14px;
+`
