@@ -1,7 +1,17 @@
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
-function _templateObject5() {
+function _templateObject6() {
   var data = _taggedTemplateLiteral(["\n  font-size: 16px;\n  color: inherit;\n  text-decoration: none;\n  font-weight: bolder;\n  color: rgb(150,150,150)\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: flex-end;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -57,4 +67,5 @@ export var Global = createGlobalStyle(_templateObject(), Poppins);
 export var PageContainer = styled.div(_templateObject2());
 export var PageContent = styled.div(_templateObject3());
 export var PageSubTitle = styled.p(_templateObject4());
-export var BreadCrumbStyled = styled(Link)(_templateObject5());
+export var PageActionsContainer = styled.div(_templateObject5());
+export var BreadCrumbStyled = styled(Link)(_templateObject6());

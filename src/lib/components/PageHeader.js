@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BreadCrumbStyled, PageTitle, PageSubTitle } from './Style';
+import { BreadCrumbStyled, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
 import { Link, BrowserRouter } from 'react-router-dom'
 class PageHeader extends Component {
 
@@ -30,12 +30,21 @@ class PageHeader extends Component {
             this.renderBreadCrumbs()
           }
         </BrowserRouter>
-        <h2>
-          {this.props.title}
-        </h2>
-        <PageSubTitle>
-          {this.props.subTitle}
-        </PageSubTitle>
+        <div className='row'>
+          <div className='col-sm-8'>
+            <h2>
+              {this.props.title}
+            </h2>
+            <PageSubTitle>
+              {this.props.subTitle}
+            </PageSubTitle>
+          </div>
+          <div className='col-sm-4'>
+            <PageActionsContainer>
+              {this.props.actions}
+            </PageActionsContainer>
+          </div>
+        </div>
       </React.Fragment>
     );
   }

@@ -4,7 +4,7 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
-import { BreadCrumbStyled, PageTitle, PageSubTitle } from './Style';
+import { BreadCrumbStyled, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
 import { Link, BrowserRouter } from 'react-router-dom';
 
 var PageHeader =
@@ -41,7 +41,13 @@ function (_Component) {
   _createClass(PageHeader, [{
     key: "render",
     value: function render() {
-      return React.createElement(React.Fragment, null, React.createElement(BrowserRouter, null, this.renderBreadCrumbs()), React.createElement("h2", null, this.props.title), React.createElement(PageSubTitle, null, this.props.subTitle));
+      return React.createElement(React.Fragment, null, React.createElement(BrowserRouter, null, this.renderBreadCrumbs()), React.createElement("div", {
+        className: "row"
+      }, React.createElement("div", {
+        className: "col-sm-8"
+      }, React.createElement("h2", null, this.props.title), React.createElement(PageSubTitle, null, this.props.subTitle)), React.createElement("div", {
+        className: "col-sm-4"
+      }, React.createElement(PageActionsContainer, null, this.props.actions))));
     }
   }]);
 

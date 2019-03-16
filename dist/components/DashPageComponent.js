@@ -26,7 +26,8 @@ function (_Component) {
       }, React.createElement(PageHeader, {
         breadcrumbs: this.props.breadcrumbs,
         title: this.props.pageTitle,
-        subTitle: this.props.pageSubtitle
+        subTitle: this.props.pageSubtitle,
+        actions: this.props.pageActions
       }), React.createElement(PageContent, null, this.props.children));
     }
   }]);

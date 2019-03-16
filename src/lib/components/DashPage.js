@@ -21,7 +21,9 @@ class DashPage extends Component {
 
 DashPage.propTypes = {
   pageTitle: PropTypes.string.isRequired,
-  pageSubtitle: PropTypes.string.isRequired
+  pageSubtitle: PropTypes.string.isRequired,
+  pageActions: PropTypes.element,
+  loading: false
 }
 
 export default DashPage;

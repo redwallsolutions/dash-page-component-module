@@ -1,6 +1,6 @@
 {
   "name": "dash-page-component-module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "bootstrap-grid": "^3.0.1",
     "react-loading-bar": "^0.0.7",
     "react-router-dom": "^4.4.0",
     "styled-components": "^4.1.3"

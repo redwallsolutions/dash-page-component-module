@@ -34,6 +34,11 @@ export const PageSubTitle = styled.p`
   letter-spacing: .8px;
 `
 
+export const PageActionsContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 export const BreadCrumbStyled = styled(Link)`
   font-size: 16px;
   color: inherit;
