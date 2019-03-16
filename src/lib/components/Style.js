@@ -1,6 +1,8 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import Poppins from './../assets/fonts/Poppins-Regular.ttf'
 
+import { Link } from 'react-router-dom'
+
 export const Global = createGlobalStyle`
   @font-face {
     font-family: Poppins;
@@ -28,6 +30,14 @@ export const PageContent = styled.div`
   width: 100%;
 `
 
-export const BreadCrumbStyled = styled.h2`
-  font-size: 14px;
+export const PageSubTitle = styled.p`
+  letter-spacing: .8px;
+`
+
+export const BreadCrumbStyled = styled(Link)`
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(150,150,150)
 `

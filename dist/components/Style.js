@@ -1,5 +1,25 @@
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 16px;\n  color: inherit;\n  text-decoration: none;\n  font-weight: bolder;\n  color: rgb(150,150,150)\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  letter-spacing: .8px;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
 
@@ -32,6 +52,9 @@ function _templateObject() {
 
 import styled, { createGlobalStyle } from 'styled-components';
 import Poppins from './../assets/fonts/Poppins-Regular.ttf';
+import { Link } from 'react-router-dom';
 export var Global = createGlobalStyle(_templateObject(), Poppins);
 export var PageContainer = styled.div(_templateObject2());
 export var PageContent = styled.div(_templateObject3());
+export var PageSubTitle = styled.p(_templateObject4());
+export var BreadCrumbStyled = styled(Link)(_templateObject5());

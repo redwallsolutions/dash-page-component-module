@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { PageContainer, PageContent, Global } from './Style';
+import { Global } from './Style';
+import DashPageComponent from './DashPageComponent';
 import Loading from 'react-loading-bar'
 import 'react-loading-bar/dist/index.css'
 
@@ -10,21 +11,8 @@ class DashPage extends Component {
     return (
       <React.Fragment>
         <Global/>
-        <PageContainer className='dash-page'>
-          <PageHeader
-            breadcrumbs={this.props.breadcrumbs}
-            actions={this.props.actions}
-            bottomBar={this.props.bottom}>
-            {this.props.pageTitle}
-            <br/>
-            <small>
-              {this.props.pageSubtitle}
-            </small>
-          </PageHeader>
-          <PageContent>
-            {this.props.children}
-          </PageContent>
-        </PageContainer>
+        <DashPageComponent {...this.props}/>
+        <Loading show={this.props.loading} color='#E21306'/>
       </React.Fragment>
     )
   }

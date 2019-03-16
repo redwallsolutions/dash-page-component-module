@@ -4,8 +4,10 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
-import PageHeader from '@atlaskit/page-header';
-import { PageContainer, PageContent, Global } from './Style';
+import { Global } from './Style';
+import DashPageComponent from './DashPageComponent';
+import Loading from 'react-loading-bar';
+import 'react-loading-bar/dist/index.css';
 
 var DashPage =
 /*#__PURE__*/
@@ -21,13 +23,10 @@ function (_Component) {
   _createClass(DashPage, [{
     key: "render",
     value: function render() {
-      return React.createElement(React.Fragment, null, React.createElement(Global, null), React.createElement(PageContainer, {
-        className: "dash-page"
-      }, React.createElement(PageHeader, {
-        breadcrumbs: this.props.breadcrumbs,
-        actions: this.props.actions,
-        bottomBar: this.props.bottom
-      }, this.props.pageTitle, React.createElement("br", null), React.createElement("small", null, this.props.pageSubtitle)), React.createElement(PageContent, null, this.props.children)));
+      return React.createElement(React.Fragment, null, React.createElement(Global, null), React.createElement(DashPageComponent, this.props), React.createElement(Loading, {
+        show: this.props.loading,
+        color: "#E21306"
+      }));
     }
   }]);
 
