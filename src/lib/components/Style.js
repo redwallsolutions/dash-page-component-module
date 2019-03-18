@@ -1,8 +1,6 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import Poppins from './../assets/fonts/Poppins-Regular.ttf'
 
-import { Link } from 'react-router-dom'
-
 export const Global = createGlobalStyle`
   @font-face {
     font-family: Poppins;
