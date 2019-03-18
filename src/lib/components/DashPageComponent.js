@@ -5,6 +5,7 @@ import { PageContainer, PageContent } from './Style';
 class DashPageComponent extends Component {
 
   render() {
+    const {startLoading, stopLoading} = this.props;
     return (
       <PageContainer className='dash-page'>
         <PageHeader
@@ -13,7 +14,7 @@ class DashPageComponent extends Component {
           subTitle={this.props.pageSubtitle}
           actions={this.props.pageActions}/>
         <PageContent>
-          {this.props.children}
+          {React.cloneElement(this.props.children, {startLoading, stopLoading})}
         </PageContent>
       </PageContainer>
     );

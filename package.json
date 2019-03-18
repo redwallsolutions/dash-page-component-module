@@ -1,4 +1,4 @@
-{
+  {
   "name": "dash-page-component-module",
   "version": "1.2.1",
   "main": "dist/index.js",
@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "bootstrap-grid": "^3.0.1",
+    "dash-page-component-module": "https://4c4f37bb6657744cab12a1d1c42e40ef1252aa1c:x-oauth-basic@github.com/redwallsolutions/dash-page-component-module.git",
     "react-loading-bar": "^0.0.7",
     "react-router-dom": "^4.4.0",
     "styled-components": "^4.1.3"
