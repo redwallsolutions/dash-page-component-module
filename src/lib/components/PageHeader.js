@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import { BreadCrumbStyled, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
-import { Link, BrowserRouter } from 'react-router-dom'
+import { BreadCrumbStyles, PageSubTitle, PageActionsContainer } from './Style';
 class PageHeader extends Component {
 
   renderBreadCrumbs = () => {
     const {breadcrumbs} = this.props;
     return (
-      breadcrumbs && breadcrumbs.map((breadcrumb, index) => (
-          <React.Fragment>
-            <BreadCrumbStyled key={index} to={breadcrumb.to}>
+      breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
+        const BreadCrumbComponent = breadcrumb.componentType
+        return (
+          <React.Fragment key={index}>
+            <BreadCrumbComponent to={breadcrumb.to} style={BreadCrumbStyles}>
               {breadcrumb.name}
-            </BreadCrumbStyled>
+            </BreadCrumbComponent>
             &nbsp;
             {
               index === breadcrumbs.length - 1 ? '' : ' / '
@@ -18,18 +19,16 @@ class PageHeader extends Component {
             &nbsp;
           </React.Fragment>
         )
-      )
+      })
     )
   }
 
   render() {
     return (
       <React.Fragment>
-        <BrowserRouter>
-          {
-            this.renderBreadCrumbs()
-          }
-        </BrowserRouter>
+        {
+          this.renderBreadCrumbs()
+        }
         <div className='row'>
           <div className='col-sm-8'>
             <h2>

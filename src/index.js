@@ -11,23 +11,26 @@ const BoxSizing = createGlobalStyle`
 `
 
 const App = () => (
-  <DashPage className='dash-page'
-    breadcrumbs={[{
-      name: 'Dashboard',
-      to: '/dashboard'
-    }]}
-    pageActions={
-      <div>
-        <button>Oi</button>
-        <button>Test</button>
-      </div>
-    }
-    pageSubtitle='Esse é o teste do component DashPage.'
-    pageTitle='Test Dash Page'
-    loading={true}>
+  <React.Fragment>
+    <DashPage className='dash-page'
+      breadcrumbs={[{
+        name: 'Dashboard',
+        to: '/dashboard',
+        componentType: 'a'
+      }]}
+      pageActions={
+        <div>
+          <button>Oi</button>
+          <button>Test</button>
+        </div>
+      }
+      pageSubtitle='Esse é o teste do component DashPage.'
+      pageTitle='Test Dash Page'
+      loading={false}>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </DashPage>
     <BoxSizing/>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </DashPage>
+  </React.Fragment>
 );
 
 render(<App />, document.getElementById("root"));

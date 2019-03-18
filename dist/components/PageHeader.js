@@ -4,8 +4,7 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
-import { BreadCrumbStyled, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { BreadCrumbStyles, PageSubTitle, PageActionsContainer } from './Style';
 
 var PageHeader =
 /*#__PURE__*/
@@ -28,9 +27,12 @@ function (_Component) {
     _this.renderBreadCrumbs = function () {
       var breadcrumbs = _this.props.breadcrumbs;
       return breadcrumbs && breadcrumbs.map(function (breadcrumb, index) {
-        return React.createElement(React.Fragment, null, React.createElement(BreadCrumbStyled, {
-          key: index,
-          to: breadcrumb.to
+        var BreadCrumbComponent = breadcrumb.componentType;
+        return React.createElement(React.Fragment, {
+          key: index
+        }, React.createElement(BreadCrumbComponent, {
+          to: breadcrumb.to,
+          style: BreadCrumbStyles
         }, breadcrumb.name), "\xA0", index === breadcrumbs.length - 1 ? '' : ' / ', "\xA0");
       });
     };
@@ -41,7 +43,7 @@ function (_Component) {
   _createClass(PageHeader, [{
     key: "render",
     value: function render() {
-      return React.createElement(React.Fragment, null, React.createElement(BrowserRouter, null, this.renderBreadCrumbs()), React.createElement("div", {
+      return React.createElement(React.Fragment, null, this.renderBreadCrumbs(), React.createElement("div", {
         className: "row"
       }, React.createElement("div", {
         className: "col-sm-8"

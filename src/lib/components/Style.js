@@ -39,10 +39,9 @@ export const PageActionsContainer = styled.div`
   justify-content: flex-end;
 `
 
-export const BreadCrumbStyled = styled(Link)`
-  font-size: 16px;
-  color: inherit;
-  text-decoration: none;
-  font-weight: bolder;
-  color: rgb(150,150,150)
-`
+export const BreadCrumbStyles = {
+  fontSize: '16px',
+  'textDecoration': 'none',
+  'fontWeight': 'bolder',
+  'color': 'rgb(150,150,150)'
+}

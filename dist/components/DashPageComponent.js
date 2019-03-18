@@ -21,6 +21,9 @@ function (_Component) {
   _createClass(DashPageComponent, [{
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+          startLoading = _this$props.startLoading,
+          stopLoading = _this$props.stopLoading;
       return React.createElement(PageContainer, {
         className: "dash-page"
       }, React.createElement(PageHeader, {
@@ -28,7 +31,10 @@ function (_Component) {
         title: this.props.pageTitle,
         subTitle: this.props.pageSubtitle,
         actions: this.props.pageActions
-      }), React.createElement(PageContent, null, this.props.children));
+      }), React.createElement(PageContent, null, React.cloneElement(this.props.children, {
+        startLoading: startLoading,
+        stopLoading: stopLoading
+      })));
     }
   }]);
 
