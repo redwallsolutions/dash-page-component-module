@@ -52,7 +52,6 @@ function _templateObject() {
 
 import styled, { createGlobalStyle } from 'styled-components';
 import Poppins from './../assets/fonts/Poppins-Regular.ttf';
-import { Link } from 'react-router-dom';
 export var Global = createGlobalStyle(_templateObject(), Poppins);
 export var PageContainer = styled.div(_templateObject2());
 export var PageContent = styled.div(_templateObject3());

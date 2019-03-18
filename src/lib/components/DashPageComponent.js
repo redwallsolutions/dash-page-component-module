@@ -9,7 +9,7 @@ class DashPageComponent extends Component {
     return (
       <PageContainer className='dash-page'>
         <PageHeader
-          breadcrumbs={this.props.breadcrumbs}
+          breadcrumbs={this.props.pageBreadcrumbs}
           title={this.props.pageTitle}
           subTitle={this.props.pageSubtitle}
           actions={this.props.pageActions}/>

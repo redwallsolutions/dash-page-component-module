@@ -3,7 +3,11 @@ import { render } from "react-dom"
 import 'bootstrap-grid'
 import DashPage from './lib'
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
+const SomeLink = styled.a`
+  color: #E21306
+`
 const BoxSizing = createGlobalStyle`
   .dash-page * {
     box-sizing: border-box;
@@ -13,10 +17,14 @@ const BoxSizing = createGlobalStyle`
 const App = () => (
   <React.Fragment>
     <DashPage className='dash-page'
-      breadcrumbs={[{
+      pageBreadcrumbs={[{
         name: 'Dashboard',
         to: '/dashboard',
-        componentType: 'a'
+        component: <SomeLink/>
+      }, {
+        name: 'Something',
+        to: '/dashboard/something',
+        component: <SomeLink/>
       }]}
       pageActions={
         <div>

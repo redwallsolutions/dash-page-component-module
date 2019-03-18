@@ -24,7 +24,7 @@ DashPage.propTypes = {
   pageSubtitle: PropTypes.string.isRequired,
   pageActions: PropTypes.element,
   pageBreadcrumbs: PropTypes.arrayOf(PropTypes.shape({
-    componentType: PropTypes.string.isRequired,
+    component: PropTypes.element.isRequired,
     to: PropTypes.string,
     name: PropTypes.string
   })),
