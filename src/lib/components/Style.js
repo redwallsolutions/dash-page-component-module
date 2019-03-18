@@ -17,8 +17,6 @@ export const Global = createGlobalStyle`
     color: rgb(100,100,100);
   }
 `
-
-
 export const PageContainer = styled.div`
   padding: 0 5px;
   width: 100%;

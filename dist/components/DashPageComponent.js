@@ -27,7 +27,7 @@ function (_Component) {
       return React.createElement(PageContainer, {
         className: "dash-page"
       }, React.createElement(PageHeader, {
-        breadcrumbs: this.props.breadcrumbs,
+        breadcrumbs: this.props.pageBreadcrumbs,
         title: this.props.pageTitle,
         subTitle: this.props.pageSubtitle,
         actions: this.props.pageActions

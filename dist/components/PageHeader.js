@@ -27,10 +27,9 @@ function (_Component) {
     _this.renderBreadCrumbs = function () {
       var breadcrumbs = _this.props.breadcrumbs;
       return breadcrumbs && breadcrumbs.map(function (breadcrumb, index) {
-        var BreadCrumbComponent = breadcrumb.componentType;
         return React.createElement(React.Fragment, {
           key: index
-        }, React.createElement(BreadCrumbComponent, {
+        }, React.cloneElement(breadcrumb.component, {
           to: breadcrumb.to,
           style: BreadCrumbStyles
         }, breadcrumb.name), "\xA0", index === breadcrumbs.length - 1 ? '' : ' / ', "\xA0");

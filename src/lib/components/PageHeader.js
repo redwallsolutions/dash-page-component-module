@@ -6,12 +6,11 @@ class PageHeader extends Component {
     const {breadcrumbs} = this.props;
     return (
       breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
-        const BreadCrumbComponent = breadcrumb.componentType
         return (
           <React.Fragment key={index}>
-            <BreadCrumbComponent to={breadcrumb.to} style={BreadCrumbStyles}>
-              {breadcrumb.name}
-            </BreadCrumbComponent>
+            {
+              React.cloneElement(breadcrumb.component, {to: breadcrumb.to, style: BreadCrumbStyles}, breadcrumb.name)
+            }
             &nbsp;
             {
               index === breadcrumbs.length - 1 ? '' : ' / '
