@@ -16,10 +16,14 @@ export const Global = createGlobalStyle`
     font-size: 15px;
     color: rgb(100,100,100);
   }
+
+  .dash-page * {
+    margin: 0;
+    padding:0;
+  }
 `
 export const PageContainer = styled.div`
   padding: 0 5px;
-  width: 100%;
 `
 
 export const PageContent = styled.div`
