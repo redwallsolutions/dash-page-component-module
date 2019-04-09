@@ -10,16 +10,13 @@ export const Global = createGlobalStyle`
   .dash-page {
     color: rgb(89,89,89);
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding:0;
   }
 
   .dash-page small {
     font-size: 15px;
     color: rgb(100,100,100);
-  }
-
-  .dash-page * {
-    margin: 0;
-    padding:0;
   }
 `
 export const PageContainer = styled.div`
