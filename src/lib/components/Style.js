@@ -1,5 +1,16 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import Poppins from './../assets/fonts/Poppins-Regular.ttf'
+import Theming from 'theming-component-module';
+import Color from 'color';
+
+const theme = Theming.createThemeWithAppearance()
+
+const defaultProps = {
+  appearance: 'primary',
+  theme: {
+    mode: 'light'
+  }
+}
 
 export const Global = createGlobalStyle`
   @font-face {
@@ -8,28 +19,45 @@ export const Global = createGlobalStyle`
     font-display: fallback;
   }
   .dash-page {
-    color: rgb(89,89,89);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding:0;
   }
-
-  .dash-page small {
-    font-size: 15px;
-    color: rgb(100,100,100);
-  }
 `
-export const PageContainer = styled.div`
+const PageContainer = styled.div`
   padding: 0 5px;
+  background: ${props => props.theme.mode === 'light' ? 'rgb(232, 232, 232)' : theme(props).contrast};
+  color: ${props => props.theme.mode === 'light' ? Color(theme(props).contrast(props)).darken(.8).string() : Color(theme(props).color(props)).fade(.3).string()};
 `
 
-export const PageContent = styled.div`
+PageContainer.defaultProps = defaultProps
+
+export {PageContainer}
+
+const PageContent = styled.div`
   width: 100%;
 `
 
-export const PageSubTitle = styled.p`
-  letter-spacing: .8px;
+PageContent.defaultProps = defaultProps
+
+export {PageContent}
+
+const PageTitle = styled.h2`
+  color: ${props => props.theme.mode === 'light' ? Color(theme(props).contrast(props)).darken(.5).string() : theme(props).color};
 `
+
+PageTitle.defaultProps = defaultProps;
+
+export {PageTitle}
+
+const PageSubTitle = styled.p`
+  letter-spacing: .8px;
+  color: ${props => props.theme.mode === 'light' ? Color(theme(props).contrast(props)).darken(.7).string() : Color(theme(props).color(props)).fade(.1).string()};
+`
+
+PageSubTitle.defaultProps = defaultProps
+
+export {PageSubTitle}
 
 export const PageActionsContainer = styled.div`
   display: flex;
@@ -38,7 +66,7 @@ export const PageActionsContainer = styled.div`
 
 export const BreadCrumbStyles = {
   fontSize: '16px',
-  'textDecoration': 'none',
-  'fontWeight': 'bolder',
-  'color': 'rgb(150,150,150)'
+  textDecoration: 'none',
+  fontWeight: 'bolder',
+  color: 'rgb(180,180,180)'
 }

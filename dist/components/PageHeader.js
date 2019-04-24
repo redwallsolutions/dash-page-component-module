@@ -4,7 +4,7 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
-import { BreadCrumbStyles, PageSubTitle, PageActionsContainer } from './Style';
+import { BreadCrumbStyles, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
 
 var PageHeader =
 /*#__PURE__*/
@@ -46,7 +46,7 @@ function (_Component) {
         className: "row"
       }, React.createElement("div", {
         className: "col-sm-8"
-      }, React.createElement("h2", null, this.props.title), React.createElement(PageSubTitle, null, this.props.subTitle)), React.createElement("div", {
+      }, React.createElement(PageTitle, null, this.props.title), React.createElement(PageSubTitle, null, this.props.subTitle)), React.createElement("div", {
         className: "col-sm-4"
       }, React.createElement(PageActionsContainer, null, this.props.actions))));
     }

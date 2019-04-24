@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BreadCrumbStyles, PageSubTitle, PageActionsContainer } from './Style';
+import { BreadCrumbStyles, PageTitle, PageSubTitle, PageActionsContainer } from './Style';
+
 class PageHeader extends Component {
 
   renderBreadCrumbs = () => {
@@ -30,9 +31,9 @@ class PageHeader extends Component {
         }
         <div className='row'>
           <div className='col-sm-8'>
-            <h2>
+            <PageTitle>
               {this.props.title}
-            </h2>
+            </PageTitle>
             <PageSubTitle>
               {this.props.subTitle}
             </PageSubTitle>
