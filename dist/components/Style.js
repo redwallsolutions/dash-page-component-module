@@ -41,7 +41,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0 5px;\n  background: ", ";\n  color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 0 5px;\n  color: ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -73,8 +73,6 @@ var defaultProps = {
 };
 export var Global = createGlobalStyle(_templateObject(), Poppins);
 var PageContainer = styled.div(_templateObject2(), function (props) {
-  return props.theme.mode === 'light' ? 'rgb(232, 232, 232)' : theme(props).contrast;
-}, function (props) {
   return props.theme.mode === 'light' ? Color(theme(props).contrast(props)).darken(.8).string() : Color(theme(props).color(props)).fade(.3).string();
 });
 PageContainer.defaultProps = defaultProps;

@@ -16,7 +16,7 @@ const BoxSizing = createGlobalStyle`
 
 const App = () => (
   <React.Fragment>
-    <ThemeProvider theme={{mode: 'light', primaryContrastDark: '#2b324c', primaryDark: '#ebebeb' }}>
+    <ThemeProvider theme={{mode: 'dark', primaryContrastDark: '#2b324c', primaryDark: '#ebebeb' }}>
       <DashPage className='dash-page'
         pageBreadcrumbs={[{
           name: 'Dashboard',

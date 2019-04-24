@@ -26,7 +26,6 @@ export const Global = createGlobalStyle`
 `
 const PageContainer = styled.div`
   padding: 0 5px;
-  background: ${props => props.theme.mode === 'light' ? 'rgb(232, 232, 232)' : theme(props).contrast};
   color: ${props => props.theme.mode === 'light' ? Color(theme(props).contrast(props)).darken(.8).string() : Color(theme(props).color(props)).fade(.3).string()};
 `
 
